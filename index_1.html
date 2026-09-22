@@ -80,7 +80,9 @@
   .navrow{
     display:flex; gap:8px; flex-wrap:wrap; padding:20px 0; border-bottom:1px solid var(--line);
     position:sticky; top:0; background:var(--paper); z-index:5;
+    transition:transform .28s ease;
   }
+  .navrow.nav-hidden{transform:translateY(-110%);}
   .navrow a{
     font-family:'IBM Plex Mono', monospace; font-size:12px; text-decoration:none;
     color:var(--ink-soft); border:1px solid var(--accent-soft); border-radius:100px; padding:6px 13px;
@@ -440,6 +442,35 @@
     closeBtn.addEventListener('click', function(e){ e.stopPropagation(); closeLightbox(); });
     document.addEventListener('keydown', function(e){
       if(e.key === 'Escape') closeLightbox();
+    });
+  })();
+
+  // Header/nav: hide on scroll down, reveal immediately on scroll up.
+  (function(){
+    var nav = document.querySelector('.navrow');
+    if(!nav) return;
+    // Capture the nav's un-stuck document position once, before any scrolling —
+    // offsetTop on a position:sticky element tracks its "stuck" (scroll-adjusted)
+    // position in Chromium once it's stuck, so re-reading it inside the scroll
+    // handler would always report roughly the current scrollY and defeat the check.
+    var navStaticTop = nav.getBoundingClientRect().top + window.scrollY;
+    var lastY = window.scrollY;
+    var ticking = false;
+    function onScroll(){
+      var y = window.scrollY;
+      if(y > lastY && y > navStaticTop + nav.offsetHeight){
+        nav.classList.add('nav-hidden');
+      } else {
+        nav.classList.remove('nav-hidden');
+      }
+      lastY = y;
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+      }
     });
   })();
 </script>
