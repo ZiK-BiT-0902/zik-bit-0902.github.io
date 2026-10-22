@@ -1,0 +1,15 @@
+.DS_Store
+
+# original source files (large); the site uses the compressed copies
+assets/img/**/originals/
+*.psd
+.playwright-mcp/
+
+# source material from the Claude chat (short format draft); not part of the site
+assets/short format/
+
+# images no page uses anymore (kept locally, not published)
+assets/img/_unused/
+
+# long versions of case studies: kept locally for reference, not published
+projects/*/long.html

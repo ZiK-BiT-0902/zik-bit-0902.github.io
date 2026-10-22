@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Style Guide · Itzik Bitran</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Itzik Bitran">
+<meta property="og:title" content="Style Guide · Itzik Bitran">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://itzikbitran.com/assets/share/home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&text=ZIK&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<!-- Live style guide. Everything here is drawn from assets/css/site.css, so it always shows the current system.
+     To change the system, edit the tokens at the top of site.css (or ask Claude), then reload this page. -->
+<header class="sitebar" id="sitebar">
+  <nav class="topbar" aria-label="Main">
+    <a class="logo" href="../" aria-label="Itzik Bitran, home">ZIK</a>
+    <span class="nav"><a href="../#works">Works</a><i aria-hidden="true">|</i><a href="../#about">About</a></span>
+  </nav>
+</header>
+
+<section class="band tight">
+  <header class="frame hero">
+    <h1>Style guide</h1>
+    <div class="hero-foot"><p class="lede">The Bitran Portfolio design system, rendered live from site.css. Change a token there and every page, including this one, follows.</p></div>
+  </header>
+</section>
+
+<section class="band">
+  <div class="grid">
+    <aside class="idx"><span class="n">01</span><span class="l">Color</span></aside>
+    <div class="body">
+      <h2>Color tokens</h2>
+      <p class="copy">One blue accent. White page, gray and blue bands to set sections apart, mint only in the home hero. Values update here automatically, and switch with dark mode.</p>
+      <div class="sg-swatches" id="swatches"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band gray">
+  <div class="grid">
+    <aside class="idx"><span class="n">02</span><span class="l">Type</span></aside>
+    <div class="body">
+      <h2>Type styles</h2>
+      <div class="sg-type">
+        <div><span class="k">Logo · Unbounded 24</span><span class="topbar"><span class="logo">ZIK</span></span></div>
+        <div><span class="k">Greeting · Sora Light 50</span><p class="home-hero" style="background:none; padding:0"><span class="hi">Hi! I’m Itzik</span></p></div>
+        <div><span class="k">Home headline · Sora Bold 62</span><div class="home-hero" style="background:none; padding:0"><h1 style="margin:0">I design the screens</h1></div></div>
+        <div><span class="k">Case hero · Sora 600 104, accent</span><div class="hero" style="padding:0; text-align:left"><h1 style="margin:0">Would you trust</h1></div></div>
+        <div><span class="k">Section title · Sora 600 62, caps</span><p class="section-title" style="text-align:left">Works</p></div>
+        <div><span class="k">Section · Sora 600 64</span><h2>Section headline</h2></div>
+        <div><span class="k">Lede · Geist 22</span><p class="lede">Intro paragraph under a hero.</p></div>
+        <div><span class="k">Copy · Geist 17</span><p class="copy">Running body copy in ink-soft. <strong>Bold phrases switch to ink.</strong></p></div>
+        <div><span class="k">Label · Geist Mono 12, caps</span><span class="mono">Index rail label</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="grid">
+    <aside class="idx"><span class="n">03</span><span class="l">Components</span></aside>
+    <div class="body">
+      <h2>Components</h2>
+
+      <p class="mono">Buttons (.btn)</p>
+      <div class="sg-row"><a class="btn" href="#">Say Hello</a><a class="btn" href="#">Download CV</a></div>
+
+      <p class="mono">Fact pills (.facts)</p>
+      <ul class="facts" style="margin:0"><li><span class="k">Role</span><span class="v">Head of Design</span></li><li><span class="k">Industry</span><span class="v">Health</span></li><li><span class="k">Product</span><span class="v">Genomic analysis platform</span></li><li><span class="k">Service</span><span class="v">End-to-end platform design</span></li></ul>
+
+      <p class="mono">Live product link (.live-link)</p>
+      <div><a class="live-link" href="#">See Franklin live ↗</a></div>
+
+      <p class="mono">Collage piece (.ci > .cb) · hover it</p>
+      <div class="sg-demo"><div class="collage-one"><div class="ci" style="--x:50%; --y:50%; --w:90%; --ar:235/183; --r:3.5deg; --d:0"><div class="cb sh-soft"><img src="../assets/img/home/c-analysis.webp" alt=""></div></div></div></div>
+
+      <p class="mono">Project card, home (.work)</p>
+      <a class="work" href="../projects/franklin/"><img src="../assets/img/home/card-franklin.webp" alt=""><div class="txt"><b>Franklin</b><span class="d">Genetic analysis platform for the genetic field</span><span class="tags"><span>Product strategy</span><span>UX research</span><span>UI systems</span></span></div></a>
+
+      <p class="mono">Fact rows (.role)</p>
+      <div class="role"><div><span class="k">Role</span><p>Head of Design</p></div><div><span class="k">Scope</span><p>Product, brand, design system</p></div><div><span class="k">Timeline</span><p>2017 to today</p></div></div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Reads each token's current value from site.css, so the swatches never drift from the real system.
+(function(){
+  var tokens=[['--accent','Brand blue: headlines, links, hover'],['--ink','Primary text'],['--ink-soft','Body copy'],['--ink-faint','Short labels only'],['--bg','Page background'],['--band-gray','Quiet section band'],['--band-blue','Highlighted section band'],['--hero-mint','Home hero gradient'],['--accent2','Solution, positive'],['--accent-warm','Challenge, outcome labels'],['--fact-bg','Fact pill fill'],['--hair','Hairline dividers']];
+  var box=document.getElementById('swatches'), cs=getComputedStyle(document.documentElement);
+  tokens.forEach(function(t){
+    var d=document.createElement('div'); d.className='sg-swatch'; d.style.setProperty('--v','var('+t[0]+')');
+    d.innerHTML='<i></i><b>'+t[0]+'</b><span>'+cs.getPropertyValue(t[0]).trim()+'</span><span>'+t[1]+'</span>';
+    box.appendChild(d);
+  });
+})();
+</script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
