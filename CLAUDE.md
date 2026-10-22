@@ -41,6 +41,10 @@ Four case studies, in this order: Franklin, ThetaRay, Dreamplace app (DreamWorks
 - Never invent metrics or claims. Ask Itzik when a fact is missing.
 - Credit accurately (e.g. the Franklin mascot: a professional illustrator drew the original character, Itzik art-directed it and designed the variations).
 
+## Publishing
+
+Live at https://itzikbitran.com, served by GitHub Pages from the repository ZiK-BiT-0902/zik-bit-0902.github.io (branch `main`). `CNAME` holds the domain: never delete it. To publish: commit, then `git push origin main`; the site updates about a minute later. The GitHub CLI (`gh`) is signed in on Itzik's Mac.
+
 ## When making changes
 
 - When Itzik approves a new visual pattern, add it to `site.css` and to `docs/design-system.md`, then apply it to every existing page so pages stay aligned.
