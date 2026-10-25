@@ -27,7 +27,7 @@ The live case studies use a shorter, image-led format, styled in the `Short case
 Every case study uses the same skeleton, top to bottom:
 
 1. **Site bar**: the shared header (ZIK wordmark, Works | About). The live-product link sits under the hero lede as a `.live-link`.
-2. **Case hero**: headline in `accent`, four project-fact pills (Role, Industry, Product, Service, values only), lede, then the hero image. A wide hero composition uses `.hero-photo.bleed`: it runs to the window edges, centered on its main screen, so the window crops the sides instead of leaving a white gap (phones get a tighter crop through `<picture>`, also edge to edge).
+2. **Case hero**: headline in `accent`, four project-fact pills (Role, Industry, Product, Service, values only), lede, then the hero image. A wide hero composition uses `.hero-photo.bleed`: it runs to the window edges, centered on its main screen, so the window crops the sides instead of leaving a white gap, up to 1818px wide. A wider Figma frame (5440 instead of 3349, side screens shown complete) adds `.xl`: it holds up to 2953px and beyond that ends naturally at the side tablets, so frames this wide are the preferred format (phones get a tighter crop through `<picture>`, also edge to edge).
 3. **01 My role**: section headline, fact list (Role, Scope, Timeline) beside a 2×2 story grid (Background, Problem, Approach, Result).
 4. **02 The users**: persona cards.
 5. **03 The challenge**: challenge and solution columns, then a before/after compare slider.

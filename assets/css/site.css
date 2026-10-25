@@ -107,7 +107,10 @@
   /* full-bleed hero: the image runs to the window edges, centered on its main object; the window crops the sides, no white gap */
   .hero-photo.bleed{max-width:none; padding-inline:0; overflow:hidden;}
   .hero-photo.bleed img{width:min(126vw, 1818px); max-width:none; margin-left:50%; transform:translateX(-50%);}
-  @media (max-width:640px){ .hero-photo.bleed{padding-inline:0;} .hero-photo.bleed img{width:100%; margin-left:0; transform:none;} }
+  /* .xl: a wider frame (5440 instead of 3349) with the side screens complete. Same tablet size, so the image is 1.624x wider (up to 2953px); on wider screens it ends where the side tablets end, so there is no cut edge. */
+  .hero-photo.bleed.xl img{width:min(204.7vw, 2953px);}
+  .hero-photo.bleed.xl.n5400 img{width:min(203.2vw, 2930px);} /* a 5400-wide frame (Dreamplace) */
+  @media (max-width:640px){ .hero-photo.bleed{padding-inline:0;} .hero-photo.bleed img, .hero-photo.bleed.xl img, .hero-photo.bleed.xl.n5400 img{width:100%; margin-left:0; transform:none;} }
   /* viewer */
   .seg{display:flex; gap:24px; margin-bottom:16px; border-bottom:1px solid var(--hair);}
   .seg button{font:500 12px var(--f-mono); letter-spacing:0.08em; text-transform:uppercase; border:0; background:none; color:var(--ink-faint); padding:0 0 12px; cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-1px;}
