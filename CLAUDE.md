@@ -6,7 +6,7 @@ Static website (plain HTML, CSS and JS, no build step) for Itzik Bitran, Head of
 
 - `index.html`: home page, built from the Figma frame (hero, collage, Works cards, About, Contact).
 - `styleguide/index.html`: live style guide rendered from `site.css`.
-- `projects/<slug>/index.html`: one folder per case study, in the short story format (four pages: franklin, thetaray, dreamworks, sixgill). `projects/franklin/long.html` and `projects/thetaray/long.html` are the earlier long versions, kept in case Itzik wants to go back.
+- `projects/<slug>/index.html`: one folder per case study, in the short story format (four pages: franklin, thetaray, dreamworks, sixgill). `projects/franklin/long.html` and `projects/thetaray/long.html` are the earlier long versions, kept in case Itzik wants to go back. The project HTML files are the source of truth: edit them directly.
 - `assets/short format/`: the draft from the Claude chat the story pages were adapted from. Reference only, git-ignored, not published.
 - `assets/css/site.css`: the shared styles and design tokens for every page. Never put page-specific `<style>` blocks in pages; add classes here.
 - `assets/js/site.js`: shared behaviour (sticky bar, hero dissolve, wave gradient, compare slider, lightbox). Each block exits if its element is missing.
