@@ -351,7 +351,7 @@
   .section-title{max-width:none; font-family:var(--f-display); font-size:clamp(36px,4.3vw,62px); font-weight:600; line-height:1.26; letter-spacing:-0.01em; text-transform:uppercase; text-align:center;}
   .section-intro{max-width:902px; margin:16px auto 0; text-align:center; font-size:17px; line-height:1.65; color:var(--ink-soft);}
   .work-list{max-width:1000px; margin:72px auto 0; display:grid; gap:31px;}
-  .work{position:relative; display:block; aspect-ratio:1298/580; border-radius:var(--radius-card); overflow:hidden; background:#121418; color:#FFFFFF; text-decoration:none; isolation:isolate;}
+  .work{position:relative; display:block; aspect-ratio:1298/700; border-radius:var(--radius-card); overflow:hidden; background:#121418; color:#FFFFFF; text-decoration:none; isolation:isolate;}
   .work > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s cubic-bezier(.2,.7,.2,1); z-index:-1;}
   .work::after{content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg, rgba(0,0,0,0) 54%, rgba(0,0,0,0.75) 100%);}
   .work .txt{position:absolute; left:26px; right:26px; bottom:35px; display:grid; gap:0;}
@@ -362,7 +362,18 @@
   .work:hover > img{transform:scale(1.03);}
   .work:focus-visible{outline:2px solid var(--accent); outline-offset:4px;}
   @media (prefers-reduced-motion: reduce){ .work > img{transition:none;} .work:hover > img{transform:none;} }
-  @media (max-width:760px){ .work-list{margin-top:40px; gap:16px;} .work{aspect-ratio:4/5;} .work .txt{left:20px; right:20px; bottom:22px;} .work::after{background:linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.82) 100%);} .works{padding-block:8px 64px;} }
+  /* phones: the wide card image stays whole, and the text moves under it (dark text, no gradient) */
+  @media (max-width:760px){
+    .work-list{margin-top:40px; gap:48px;} .works{padding-block:8px 64px;}
+    .work{aspect-ratio:auto; overflow:visible; background:none; color:var(--ink); border-radius:0; isolation:auto;}
+    .work > img{position:static; height:auto; aspect-ratio:1298/700; border-radius:var(--radius-card); z-index:auto;}
+    .work::after{display:none;}
+    .work .txt{position:static; padding-top:16px;}
+    .work .d{color:var(--ink-soft);}
+    .work .tags{margin-top:12px;}
+    .work .tags span{border-color:var(--hair); background:none; color:var(--ink);}
+    .work:hover > img{transform:none;}
+  }
 
   /* about (home) and live-product link (case-study hero) */
   .about .role{row-gap:28px;}
