@@ -163,6 +163,6 @@
   var els=document.querySelectorAll('[data-reveal]'); if(!els.length) return;
   if (!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
   document.documentElement.classList.add('js-reveal');
-  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:0.18, rootMargin:'0px 0px -6% 0px'});
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:0, rootMargin:'0px 0px 8% 0px'}); // start as soon as the top edge is about to enter, so there is never an empty gap
   els.forEach(function(el){ io.observe(el); });
 })();
