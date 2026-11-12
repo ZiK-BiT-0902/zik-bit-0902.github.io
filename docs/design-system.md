@@ -54,7 +54,20 @@ Numbered sections are a real sequence; renumber when a section is removed. Secti
 
 ZIK wordmark on the left in Unbounded 24px (`--f-logo`, loaded only for the letters Z, I, K), `Works | About` on the right in Sora 16px, ink, accent on hover. Sticky. Transparent over the hero, solid `--bar-bg` once the page scrolls. On project pages the links point to `../../#works` and `../../#about`. The first section on a page gets `.under-bar` so its background runs behind the bar.
 
-## Home page
+## Home page (v2, current)
+
+Built from Figma frame 208:376. Page background `#F5F3F8` (home only), ink `#261E33`, deep green `#102A2A`, green accent `#6AF373`.
+
+1. **Hero** (`.nh-hero`): soft light-blue radial glow at the top, "Hi, I'm Zik" in Sora Bold 72px accent, the one-line intro in Sora Light 38px, two pill buttons (Say Hello: white, LinkedIn; Download CV: solid accent, the PDF), and "Scroll to see what I've been up to" with a bobbing arrow linking to #works.
+2. **Selected works** (`.nh-card`): four cards (max 1180px wide, the same as the project-page content and the About section; 1297 × 447 proportions, 30px radius), each on its own gradient (Franklin navy, ThetaRay teal, DreamWorks light blue, Sixgill purple). Text left: project name in Sora 42 regular, the description in Sora 42 bold (32 on small laptops, 22 on phones, 20 in Related work), "View case study ↗" in Sora 24. Tilted product screens right, placed as in Figma with `--x --y --w --ar --r`. On hover the screens lift and tilt (`--hx --hy --hr`); on scroll the cards rise in and the screens settle into place. On phones the text sits above and the screens below, cropped to the right side of the card.
+3. **About me** (`.nh-about`): deep green card (60px radius) with Itzik's text in Sora 18px, pill-shaped portrait overlapping the top right, floating blue and green dots. "Franklin" links to the live product; "hiking" and "drawing" open the photo cards.
+4. **Closing call to action** (`.nh-final`): accent card with a notch for the green dot: "Say hello on LinkedIn ↗ or download my CV to see what I've been doing".
+
+Buttons lift 3px with a soft blue shadow on hover. "View case study" gets an underline under the words only (not the arrow) when its card is hovered. On phones the About portrait is a 200px circle. The hero glow is two soft blobs drifting slowly like a cloud.
+
+All motion is switched off for `prefers-reduced-motion`.
+
+## Home page (v1, archived in home-v1.html)
 
 Built from the Figma frame "Works" (Portfolio-project, node 125-1215). Top to bottom:
 
@@ -63,9 +76,13 @@ Built from the Figma frame "Works" (Portfolio-project, node 125-1215). Top to bo
 3. **Works** (`#works`): `.section-title` (Sora 600 62px, uppercase, centered), `.section-intro`, then `.work` cards (max 1000px wide, centered): full-width photo, 10px radius, black gradient from 54% down, title Sora Bold 26px, one-line description Sora 16px and tags in Geist Mono 12px (fixed sizes on every screen) with a white outline. Image zooms 3% on hover. On phones the card keeps its wide image whole and the title, description and tags move under it in dark text (no gradient).
 4. **About** (`#about`, from Figma): `.band.dark` in `--about-bg` (#090708) with white Sora 22px text, a few words highlighted in `--lime` (#B9FF00) with `<em>`, Itzik's portrait (10px radius) on the right, and the two buttons in their `.btn.lime` version. The text is Itzik's own and is used as written. This band is the only place lime and a dark background appear. Background (`.bg-topo`): faint topographic contour lines (`assets/img/about/topo.svg` at 5% opacity, fading out toward the bottom), a lime glow top right and a smaller light-blue glow (#7EA2FF) beside it. "Franklin" is a `.lime-link` (underlined, opens the live product in a new tab). "Pulpit Rock" and "drawing" are `.peek` words: hovering (or tapping on a phone) fans out two or three tilted photo cards above the word, listed in `data-peek` with photos from `assets/img/about/`. On tablets and phones the photo moves below the text. The home page ends here: the About buttons are the contact.
 
+## Dark project pages (trial)
+
+ThetaRay and Sixgill use `<body class="page-dark">`: background `#1C1526`, light text, lighter accent `#8FA2FF` for contrast. Their top images are transparent so they sit on any background, and their screenshots sit directly on the page (no dark band). Remove the class to go back to white.
+
 ## Project navigation
 
-Every case study ends with a gray band holding the `.pager` (previous and next project, looping in the order Franklin, ThetaRay, Dreamplace app, Sixgill), then Related work cards for the other three projects, then the contact line.
+Every case study ends with a gray band holding Related work: compact versions of the home page project cards (`.nh-related > .nh-card.compact`, text on top, screens below) for the other three projects, then the contact line. There is no previous/next pager.
 
 ## Project tags
 

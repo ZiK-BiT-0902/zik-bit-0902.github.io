@@ -4,7 +4,7 @@ Static website (plain HTML, CSS and JS, no build step) for Itzik Bitran, Head of
 
 ## Structure
 
-- `index.html`: home page, built from the Figma frame (hero, collage, Works cards, About, Contact).
+- `index.html`: home page v2 (Figma frame 208:376, Nov 2026): lavender page, "Hi, I'm Zik" hero, four gradient project cards, About card and closing call to action. Images in `assets/img/home2/`, styles in the `Home page v2` block of `site.css` (`nh-` classes). The previous home page is `home-v1.html` (local only, git-ignored) and in git history; it still works if restored.
 - `styleguide/index.html`: live style guide rendered from `site.css`.
 - `projects/<slug>/index.html`: one folder per case study, in the short story format (four pages: franklin, thetaray, dreamworks, sixgill). `projects/franklin/long.html` and `projects/thetaray/long.html` are the earlier long versions, kept in case Itzik wants to go back. The project HTML files are the source of truth: edit them directly.
 - `assets/short format/`: the draft from the Claude chat the story pages were adapted from. Reference only, git-ignored, not published.
@@ -24,7 +24,7 @@ The source of truth is the Bitran Portfolio design system (Claude artifact: http
 - One blue `--accent` (#2F4FF0). The only exception is the home About band: dark background with lime (`--lime`) highlights, from Itzik's Figma. Sora for headlines and numbers, Geist for text, Geist Mono for small uppercase labels. No serif, no italic accent words in headlines.
 - Swiss grid: numbered index rail (`.grid > aside.idx + .body`), rules instead of boxed cards.
 - Images: real screenshots and photos (Itzik's own generated scenes with real screens composited in are fine), 3px corners (8px for persona portraits, 10px for home cards), no borders, no shadows, no gray mats, no captions under images. The home collage is the one exception for borders and shadows.
-- Every page uses the same sticky site bar: ZIK wordmark, Works | About, solid white once scrolled.
+- Every page uses the same sticky site bar: "Z" logo, Works | About, solid page color once scrolled (white on project pages, lavender on the home page).
 - Every case study opens with a question headline in accent and four fact pills: Role, Industry, Product, Service (values only).
 - Motion respects `prefers-reduced-motion`.
 - Light only: the site never switches to dark colors, even when the visitor's system is in dark mode (every page has `<meta name="color-scheme" content="light">`).

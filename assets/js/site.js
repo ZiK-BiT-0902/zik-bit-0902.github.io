@@ -79,7 +79,7 @@
   var U={}; ['r','t','bg','c1','c2','c3','k'].forEach(function(n){U[n]=gl.getUniformLocation(pr,n);});
   function rgb(s){var d=document.createElement('div');d.style.color=s;document.body.appendChild(d);var m=getComputedStyle(d).color.match(/[\d.]+/g);d.remove();return m.slice(0,3).map(function(x){return x/255;});}
   function colors(){
-    var cs=getComputedStyle(document.documentElement);
+    var cs=getComputedStyle(document.body); // body, so page-level themes (page-dark) are picked up
     var dark=rgb(cs.getPropertyValue('--bg').trim()||'#fff')[0]<.5;
     gl.uniform3fv(U.bg,rgb(cs.getPropertyValue('--bg').trim()||'#ffffff'));
     gl.uniform3fv(U.c1,dark?[0.16,0.26,0.62]:[0.85,0.89,1.0]);   // soft blue
@@ -157,4 +157,12 @@
     });
   }
   window.addEventListener('resize',update); update();
+})();
+(function(){
+  // home v2: cards, portrait and closing card rise in (and card screens settle) as they scroll into view
+  var els=document.querySelectorAll('[data-reveal]'); if(!els.length) return;
+  if (!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  document.documentElement.classList.add('js-reveal');
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:0.18, rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el){ io.observe(el); });
 })();

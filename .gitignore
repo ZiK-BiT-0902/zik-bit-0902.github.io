@@ -13,3 +13,6 @@ assets/img/_unused/
 
 # long versions of case studies: kept locally for reference, not published
 projects/*/long.html
+
+# previous home page, kept locally in case Itzik wants it back (also in git history)
+home-v1.html
