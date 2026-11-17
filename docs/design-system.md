@@ -17,7 +17,7 @@ The live case studies use a shorter, image-led format, styled in the `Short case
 1. Shared site bar.
 2. Case hero, compact (`.hero.compact`): question headline in accent at up to 70px (desktop line breaks with `<br class="lb-d">`, hidden on phones, where the hero is left-aligned), the four fact pills, optional `.live-link`.
 3. Hero image (`.hero-photo`, or `.hero-photo.bleed` for a wide composition).
-4. One narrow text column (`.s-col`, 640px): a Summary box (`.s-summary`, band-blue tint) and a one-sentence hook (`.s-hook`, Sora Light with the key phrase in accent).
+4. One centered text column (`.s-col`, 800px; chapter paragraphs capped at 720px, about 89 characters a line): a Summary box (`.s-summary`, band-blue tint) and a one-sentence hook (`.s-hook`, Sora Light with the key phrase in accent).
 5. Numbered chapters (`.s-ch`), each opened by a short accent bar (`.s-divider`) and followed by wide images (`.s-media` at 1180px, in `.duo`, `.trio`, `.stack`, `.phones`, `.crop`, `.narrow`, `.people`). Dark product UIs sit on a full-width dark band (`.s-dark`, `--band-dark`) so they don't float on white.
 6. "What it led to" chapter with result rows (`.nums` / `.num`), then one "What I learned" line (`.learned`).
 7. Gray band with the pager and Related work, then the contact band.
