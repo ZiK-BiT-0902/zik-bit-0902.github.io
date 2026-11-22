@@ -522,7 +522,7 @@
   @keyframes nh-cloud-b{0%{transform:translate(22%,8%) scale(1);} 50%{transform:translate(-18%,14%) scale(1.15);} 100%{transform:translate(-26%,2%) scale(0.92);}}
   .nh-hero-in{min-height:677px; padding:57px 24px 72px; display:flex; flex-direction:column; align-items:center;}
   .nh-hero h1{font-size:72px; font-weight:700; line-height:1.26; letter-spacing:-0.01em; color:var(--accent); max-width:none;}
-  .nh-sub{margin-top:19px; max-width:1079px; font-family:var(--f-display); font-weight:300; font-size:38px; line-height:1.26; color:var(--nh-ink); text-wrap:wrap;}
+  .nh-sub{margin-top:19px; max-width:1079px; font-family:var(--f-display); font-weight:300; font-size:38px; line-height:1.26; color:var(--nh-ink); text-wrap:balance;}
   .nh-cta-row{display:flex; gap:8px; margin-top:73px;}
   .nh-btn{display:inline-flex; align-items:center; justify-content:center; width:180px; height:60px; border-radius:53px; background:#FFFFFF; border:1px solid #FFFFFF; color:var(--accent); font-family:var(--f-body); font-size:18px; text-decoration:none; transition:transform .25s ease, box-shadow .25s ease, background .2s ease;}
   .nh-btn.solid{background:var(--accent); border-color:var(--accent); color:#FFFFFF;}
